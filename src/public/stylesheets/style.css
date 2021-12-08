@@ -1,3 +1,11 @@
-body {
-    color: aqua;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* ----------Nav bar */
+.navbar-nav {
+    font-size: 20px;
+    font-weight: 600;
 }
