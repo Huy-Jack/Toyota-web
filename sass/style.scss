@@ -1,0 +1,14 @@
+html {
+    font-size: 50px;
+}
+.header {
+    background-color: blue;
+    height: auto;
+    &-content {
+        color: yellow;
+        &-title {
+            background-color: brown;
+            text-align: center;
+        }
+    }
+  }
