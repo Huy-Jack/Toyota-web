@@ -1,0 +1,17 @@
+html {
+  font-size: 50px;
+}
+
+.header {
+  background-color: blue;
+  height: auto;
+}
+.header-content {
+  color: yellow;
+}
+.header-content-title {
+  background-color: brown;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
