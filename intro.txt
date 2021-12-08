@@ -1,0 +1,25 @@
+router
+    phase 1
+    /toyota
+    /toyota/danh-sach-xe
+    /toyota/dich-vu
+    phase 2
+    /toyota/dich-vu/dich-vu-bao-duong
+    /toyota/phu-kien/phu-kien-chinh-hang
+    /toyota/tin-tuc
+    /toyota/tin-tuc/khuyen-mai
+    /toyota/tin-tuc/xa-hoi
+    /toyota/tin-tuc/thong-tin-khac
+    /toyota/cong-nghe
+
+
+model
+    name,
+    image,
+    price,
+    version,
+    type/category,
+    origin,
+
+
+testing
