@@ -21,17 +21,18 @@ const app = express();
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
+app.use(express.static('public'))
 
 // using ejs
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     const person = {
         name: 'Wave',
         age: 20
     }
-    res.render('home', {person});
+    res.render('home', { person });
 })
 
-app.get('/greeting', (req, res) =>{
+app.get('/greeting', (req, res) => {
     res.send('Hello my frined!');
 })
 
