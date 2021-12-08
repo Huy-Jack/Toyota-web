@@ -1,17 +1,67 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"><img src="src/images/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Pricing</a>
-                <a class="nav-link disabled">Disabled</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Sản phẩm
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">SEDAN</a></li>
+                        <li><a class="dropdown-item" href="#">HATCHBACK</a></li>
+                        <li><a class="dropdown-item" href="#">SUV</a></li>
+                        <li><a class="dropdown-item" href="#">ĐA DỤNG</a></li>
+                        <li><a class="dropdown-item" href="#">BÁN TẢI</a></li>
+                        <li><a class="dropdown-item" href="#">THƯƠNG MẠI</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Công nghệ
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">HYBRID</a></li>
+                        <li><a class="dropdown-item" href="#">TSS</a></li>
+                        <li><a class="dropdown-item" href="#">TNGA</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dịch vụ
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Dịch vụ bảo dưỡng</a></li>
+                        <li><a class="dropdown-item" href="#">Dịch vụ sau bán hàng</a></li>
+                        <li><a class="dropdown-item" href="#">Sản phẩm chính hãng</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Về Toyota Việt Nam
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Tuyển dụng</a></li>
+                        <li><a class="dropdown-item" href="#">Giới thiệu công ty</a></li>
+                        <li><a class="dropdown-item" href="#">Cộng đồng</a></li>
+                        <li><a class="dropdown-item" href="#">Nội địa hóa</a></li>
+                        <li><a class="dropdown-item" href="#">Tạp chí Toyota</a></li>
+                        <li><a class="dropdown-item" href="#">Tham quan nhà máy</a></li>
+                    </ul>
+                </li>
             </div>
         </div>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+        </form>
     </div>
 </nav>
