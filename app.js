@@ -21,7 +21,7 @@ const app = express();
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
-app.use(express.static('public'))
+app.use(express.static('src/public'))
 
 // using ejs
 app.get('/', (req, res) => {
