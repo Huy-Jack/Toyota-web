@@ -4,23 +4,30 @@ const Schema = mongoose.Schema;
 const imageSchema = new Schema({
     url: String,
     filename: String
-})
+});
 
-const modelCar = ['Fortuner', 'Raize', 'Vios', 'Wigo','Avanza', 'Rush', 'Yaris', 'Hilux', 'Corolla Altis', 'Alphard', 'Granvia', 'Hiace',
-'Land Prado', 'Land Cruiser', 'Camry', 'Corolla Cross', 'Innova'];
-const carsSchema = new Schema({
-    name: String,
-    images: [imageSchema],
-    price: Number,
-    version: String,
+const carSchema = new Schema({
+    name: {
+        type: String
+    },
+    images: {
+        type: [String]
+    },
+    price: {
+        type: Number
+    },
+    version: {
+        type: String
+    },
     category: {
-        type: String,
-        enum: modelCar
+        type: String
     },
     origin: {
-        type: String,
-        enum: ["Xe trong nước", "Xe nhập khẩu"]
+        type: String
+    },
+    descriptions: {
+        type: [String]
     }
 })
 
-module.exports = mongoose.model('Car', carsSchema);
+module.exports = mongoose.model('Car', carSchema);

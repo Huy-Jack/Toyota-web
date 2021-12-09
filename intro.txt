@@ -12,10 +12,14 @@ router
     /toyota/tin-tuc/thong-tin-khac
     /toyota/cong-nghe
 
+    /admin
 
 model
     name,
-    image,
+    image[]: [{
+        url,
+        filename: string
+    }, ..],
     price,
     version,
     type/category,
