@@ -51,7 +51,23 @@
     border-color: #EB0A1E;
 }
 
-#slide-list {
-    width: 80%;
+/* ---------- Slide Section ---------- */
+.slide {
+    width: 90%;
     margin: auto;
+}
+#carousel-control-prev-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: black;
+}
+#carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: black;
+}
+#carousel-indicators [data-bs-target] {
+    background-color: #EB0A1E;
 }
