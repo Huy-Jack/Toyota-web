@@ -50,3 +50,8 @@
 #search-box{
     border-color: #EB0A1E;
 }
+
+#slide-list {
+    width: 80%;
+    margin: auto;
+}
