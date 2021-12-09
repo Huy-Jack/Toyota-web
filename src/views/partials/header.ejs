@@ -1,18 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="logo" style="width: 100px; height: 100px;"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="/images/logo.jpg" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="nav-list-items" class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Sản phẩm
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">SEDAN</a></li>
                         <li><a class="dropdown-item" href="#">HATCHBACK</a></li>
                         <li><a class="dropdown-item" href="#">SUV</a></li>
@@ -22,46 +22,48 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Công nghệ
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">HYBRID</a></li>
                         <li><a class="dropdown-item" href="#">TSS</a></li>
                         <li><a class="dropdown-item" href="#">TNGA</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Dịch vụ
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Dịch vụ bảo dưỡng</a></li>
                         <li><a class="dropdown-item" href="#">Dịch vụ sau bán hàng</a></li>
                         <li><a class="dropdown-item" href="#">Sản phẩm chính hãng</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Về Toyota Việt Nam
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Tuyển dụng</a></li>
                         <li><a class="dropdown-item" href="#">Giới thiệu công ty</a></li>
-                        <li><a class="dropdown-item" href="#">Cộng đồng</a></li>
+                        <li><a class="dropdown-item" href="#">Cộng đòng</a></li>
                         <li><a class="dropdown-item" href="#">Nội địa hóa</a></li>
                         <li><a class="dropdown-item" href="#">Tạp chí Toyota</a></li>
                         <li><a class="dropdown-item" href="#">Tham quan nhà máy</a></li>
                     </ul>
                 </li>
-            </div>
+            </ul>
+            <form class="d-flex">
+                <input id="search-box" class="form-control me-2" type="search" placeholder="Tìm kiếm"
+                    aria-label="Tìm kiếm">
+                <button id="btn-red" class="btn btn-outline-primary" type="submit"><i
+                        class="fas fa-search"></i></button>
+            </form>
         </div>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
-        </form>
     </div>
 </nav>
