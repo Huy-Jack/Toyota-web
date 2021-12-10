@@ -52,7 +52,7 @@
 }
 
 /* ---------- Slide Section ---------- */
-.slide {
+.section-slide-banner {
     width: 90%;
     margin: auto;
 }
@@ -75,4 +75,75 @@
     position: absolute;
     left: 8%;
     top: 50vh;
+}
+
+/* ---------- Discovery Vehicle Section ---------- */
+.section-discovery-vehicles {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+#discovery-vehicles-title {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 120%;
+    color: #1A1A1A;
+    margin-bottom: 56px;
+}
+#discovery-vehicles-row-1 {
+    margin-bottom: 56px;
+}
+.card {
+    transition: 0.3s;
+}
+#card {
+    border: 1px solid #EB0A1E;
+}
+.card:hover {
+    border: 1px solid #EB0A1E;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 2px #EB0A1E;
+}
+.card-img-top {
+    padding-top: 20px;
+}
+
+
+.services {
+    padding: 40px 0;
+}
+hr:not([size]) {
+    max-width: 1320px;
+    margin: 30px auto;
+}
+#service-items {
+    text-align: center;
+}
+#service-items span {
+    margin: auto;
+}
+.bg-khuyen-mai-image {
+    display: block;
+    width: 82px;
+    height: 82px;
+    background: url(/images/icons.png) -210px -10px;
+}
+.bg-bang-gia-image {
+    display: block;
+    width: 82px;
+    height: 82px;
+    background: url(/images/icons.png) -210px -112px;
+}
+.bg-dang-ky-lai-thu-image {
+    display: block;
+    width: 82px;
+    height: 82px;
+    background: url(/images/icons.png) -312px -10px;
+}
+.service-type {
+    margin: 0;
+    margin-top: 16px;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1A1A1A;
 }
