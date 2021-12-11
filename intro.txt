@@ -13,6 +13,7 @@ router
     /toyota/cong-nghe
 
     /admin
+    /admin/new-car
 
 model
     name,

@@ -1,8 +1,13 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const path = require('path');
 const testRouter = require('./src/routes/all.js');
+const adminRouter = require('./src/routes/admin.js');
 
 mongoose.connect('mongodb://localhost:27017/toyota', {
     useNewUrlParser: true,
@@ -18,22 +23,15 @@ db.once("open", () => {
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
-app.use(express.static('src/public'))
-
-// using ejs
-// app.get('/', (req, res) => {
-//     const person = {
-//         name: 'Wave',
-//         age: 20
-//     }
-//     res.render('home', { person });
-// })
+app.use(express.static('src/public'));
 
 app.use('/', testRouter);
-
+app.use('/admin', adminRouter);
 app.get('/greeting', (req, res) => {
     res.send('Hello my frined!');
 })

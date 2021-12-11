@@ -28,9 +28,12 @@ const initData = async() =>{
             price: priceRan,
             origin: originRan,
             category: cars[i].model,
-            images: ['https://ssa-api.toyotavn.com.vn/Resources/Images/E686F5FF2B31D7E47A2EA60919DA8EEC.png',
-                    'https://ssa-api.toyotavn.com.vn/Resources/Images/3B19AD24C38CE54D334BC1DEAF41587D.png'
-                ],
+            images: [
+                {
+                    url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1639190152/Toyota/kz10l8vp6ysicym6ncxw.png',
+                    filename: 'Toyota/kz10l8vp6ysicym6ncxw'
+                }
+            ],
             versions: 'Toyota-v',
             descriptions: [...cars[i].description]
         })
