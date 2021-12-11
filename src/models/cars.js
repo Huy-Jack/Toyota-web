@@ -11,7 +11,7 @@ const carSchema = new Schema({
         type: String
     },
     images: {
-        type: [String]
+        type: [imageSchema]
     },
     price: {
         type: Number
