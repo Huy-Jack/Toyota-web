@@ -20,7 +20,7 @@
 }
 .navbar-nav {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
 }
 #nav-list-items {
     width: 100%;
@@ -82,14 +82,14 @@
     padding-top: 120px;
     padding-bottom: 60px;
 }
-#discovery-vehicles-title {
+.title {
     font-weight: bold;
     font-size: 38px;
     line-height: 120%;
     color: #1A1A1A;
     margin-bottom: 56px;
 }
-#discovery-vehicles-row-1 {
+#discovery-vehicles-row-1, #discovery-vehicles-row-2{
     margin-bottom: 56px;
 }
 .card {
@@ -102,17 +102,13 @@
     border: 1px solid #EB0A1E;
     box-sizing: border-box;
     box-shadow: 0px 0px 5px 2px #EB0A1E;
+    z-index: 1;
+    transform: translateY(-2%);
 }
 .card-img-top {
     padding-top: 20px;
 }
-
-
-.services {
-    padding: 40px 0;
-}
 hr:not([size]) {
-    max-width: 1320px;
     margin: 30px auto;
 }
 #service-items {
@@ -147,3 +143,18 @@ hr:not([size]) {
     line-height: 20px;
     color: #1A1A1A;
 }
+/* ---------- Service Section ---------- */
+.services {
+    padding-top: 60px;
+}
+#card-no-outline .card-img-top{
+    padding-top: 0;
+    height: 249px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ---------- Service Section ---------- */
+/* ---------- Service Section ---------- */
+/* ---------- Service Section ---------- */
+/* ---------- Service Section ---------- */
