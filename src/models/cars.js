@@ -6,20 +6,39 @@ const imageSchema = new Schema({
     filename: String
 });
 
+const colorCarSchema = new Schema({
+    name: String,
+    color: String,
+    price: Number ,
+    image: imageSchema
+});
+
+const exteriorSchema = new Schema({
+    name: String,
+    image: imageSchema,
+    description: String
+})
+
+const interiorSchema = new Schema({
+    name: String,
+    image: imageSchema,
+    description: String
+})
+
 const carSchema = new Schema({
     name: {
         type: String
     },
-    images: {
+    imageOriginal: {
         type: [imageSchema]
     },
-    price: {
+    priceOriginal: {
         type: Number
     },
     version: {
         type: String
     },
-    category: {
+    model: {
         type: String
     },
     origin: {
@@ -27,6 +46,14 @@ const carSchema = new Schema({
     },
     descriptions: {
         type: [String]
+    },
+    colorsCar: {
+        type:  [colorCarSchema]
+    },
+    exterior: {
+        type: [exteriorSchema]
+    }, interior: {
+        type: [interiorSchema]
     }
 })
 
