@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/new-car', (req, res) => {
-    res.render('admin/new');
+    res.render('admin/new-car');
 })
 
 router.post('/new-car', upload.array('images'), async(req, res) => {
@@ -22,4 +22,12 @@ router.post('/new-car', upload.array('images'), async(req, res) => {
     res.send(car);
 })
 
+router.get('/new-post', async(req, res) => {
+    res.send('Hello');
+})
+
+router.get('/cars', async(req, res) => {
+    const car = await Car.find({});
+    res.json(car);
+})
 module.exports = router;

@@ -187,5 +187,38 @@ const modelCar = ['Fortuner', 'Raize', 'Vios', 'Wigo','Avanza', 'Rush', 'Yaris',
 
 
 const origin = ["Xe trong nước", "Xe nhập khẩu"];
+const colorsCar = [
+    {
+        name: 'Đỏ 3R3',
+        color: '#60121A',
+        price: 531000000,
+        image: {
+            url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1639485684/Toyota/125883CC60FF8AE138743370C91E10DA_wwlyl3.png',
+            filename: ''
+        }
+    }
+] 
 
-module.exports= {cars, origin};
+const interior = [
+    {
+        name: 'Hệ thống giải trí',
+        image: {
+            url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1639485754/Toyota/D5A7D1D2B129101FE9D42191F1DFABB3_v8lkh9.png',
+            filename: ''
+        },
+        description: `Việc giải trí được tối ưu hóa với Apple Car Play/ Android Auto cho phép bạn bắt đầu cuộc gọi, gửi/nhận tin nhắn văn bản và nghe nhạc. Đặc biệt, Car Play cũng tương thích với Siri cho phép bạn đưa ra yêu cần bạn muốn hoặc cần trong khi lái xe mà không cần rời mắt khỏi tay lái hoặc rời tay lái, đồng thời hoạt động với các nút và nút bấm trên xe của bạn`
+    }
+]
+
+const exterior = [
+    {
+        name: 'Gương hậu',
+        image: {
+            url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1639485909/Toyota/2E7A15E60A8D52548C2E1AB9B4BE5ED5_yptfmu.png',
+            filename: ''
+        },
+        description: `Gương chiếu hậu được cải tiến với chức năng điều chỉnh điện ,chức năng gập điện và tích hợp báo rẽ tạo nên sự tiện nghi, dễ dàng hơn hết cho lái xe.`
+    }
+]
+
+module.exports= { cars, origin, colorsCar, interior, exterior };
