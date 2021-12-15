@@ -221,4 +221,26 @@ const exterior = [
     }
 ]
 
-module.exports= { cars, origin, colorsCar, interior, exterior };
+const safe = [
+    {
+        name: 'Túi khí',
+        image: {
+            url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1639539906/Toyota/8F6428C66423CF9B68964D571AA44AC2_ug1qi8.png',
+            filename: ''    
+        },
+        description: 'Các dòng xe VIOS mới được trang bị hệ thống 7 túi khí gồm 2 túi khí phía trước, 2 túi khí bên hông phía trước, 2 túi khí rèm và 1 túi khí đầu gối người lái sẽ đảm bảo an toàn cho hành khách và người lái trên mọi hành trình.'
+    }
+]
+
+const operate = [
+    {
+        name: 'Vận hành êm ái, thoải mái',
+        image: {
+            url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1639539869/Toyota/72022C926EDEDB0624320A6F2AB34511_negaqf.jpg',
+            filename: ''
+        },
+        description: 'Vios thế hệ mới mang lại trải nghiệm thú vị và thư thái.'
+    }
+
+]
+module.exports= { cars, origin, colorsCar, interior, exterior, operate, safe };
