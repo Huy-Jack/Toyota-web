@@ -13,13 +13,7 @@ const colorCarSchema = new Schema({
     image: imageSchema
 });
 
-const exteriorSchema = new Schema({
-    name: String,
-    image: imageSchema,
-    description: String
-})
-
-const interiorSchema = new Schema({
+const cardCar = new Schema({
     name: String,
     image: imageSchema,
     description: String
@@ -38,7 +32,7 @@ const carSchema = new Schema({
     version: {
         type: String
     },
-    model: {
+    category: {
         type: String
     },
     origin: {
@@ -51,9 +45,21 @@ const carSchema = new Schema({
         type:  [colorCarSchema]
     },
     exterior: {
-        type: [exteriorSchema]
+        type: [cardCar]
     }, interior: {
-        type: [interiorSchema]
+        type: [cardCar]
+    },
+    safe: {
+        type: [cardCar]
+    },
+    operate: {
+        type: [cardCar]
+    },
+    seats: {
+        type: String
+    },
+    types: {
+        type: String
     }
 })
 

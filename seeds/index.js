@@ -1,6 +1,6 @@
 const mongoose  = require('mongoose');
 const Car = require('../src/models/cars.js');
-const { cars, origin, colorsCar, interior, exterior } = require('./cars.js');
+const { cars, origin, colorsCar, interior, exterior, safe, operate } = require('./cars.js');
 
 mongoose.connect('mongodb://localhost:27017/toyota', {
     useNewUrlParser: true,
@@ -38,7 +38,11 @@ const initData = async() =>{
             descriptions: [...cars[i].description],
             colorsCar : colorsCar,
             interior: interior,
-            exterior: exterior
+            exterior: exterior,
+            safe: safe,
+            operate: operate,
+            types: 'SEDAN',
+            seats: '5 chỗ'
         })
         await car.save();
     }
