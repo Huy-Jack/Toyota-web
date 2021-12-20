@@ -55,6 +55,7 @@
 .section-slide-banner {
     width: 90%;
     margin: auto;
+    padding-bottom: 60px;
 }
 #carousel-control-prev-icon {
     width: 40px;
@@ -79,7 +80,7 @@
 
 /* ---------- Discovery Vehicle Section ---------- */
 .section-discovery-vehicles {
-    padding-top: 120px;
+    padding-top: 60px;
     padding-bottom: 60px;
 }
 .title {
@@ -144,8 +145,9 @@ hr:not([size]) {
     color: #1A1A1A;
 }
 /* ---------- Service Section ---------- */
-.services {
+.section-services {
     padding-top: 60px;
+    padding-bottom: 60px;
 }
 #card-no-outline .card-img-top{
     padding-top: 0;
@@ -154,7 +156,17 @@ hr:not([size]) {
     object-position: center;
 }
 
-/* ---------- Service Section ---------- */
+/* ---------- Service Technologies ---------- */
+.section-technologies {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#read-more-tech {
+    width: 150px;
+    margin: auto;
+    margin-top: 30px;
+    padding: auto;
+}
 /* ---------- Service Section ---------- */
 /* ---------- Service Section ---------- */
 /* ---------- Service Section ---------- */
