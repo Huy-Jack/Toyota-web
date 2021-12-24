@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 /* ---------- Nav bar ---------- */
@@ -49,6 +50,7 @@
 }
 #search-box{
     border-color: #EB0A1E;
+    box-shadow: none;
 }
 
 /* ---------- Slide Section ---------- */
@@ -101,10 +103,8 @@
 }
 .card:hover {
     border: 1px solid #EB0A1E;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 5px 2px #EB0A1E;
+    box-shadow: 0px 0px 10px 2px #EB0A1E;
     z-index: 1;
-    transform: translateY(-2%);
 }
 .card-img-top {
     padding-top: 20px;
@@ -144,6 +144,49 @@ hr:not([size]) {
     line-height: 20px;
     color: #1A1A1A;
 }
+/* Tabs Section */
+  
+  .tabs .wrapper {
+    width: inherit;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .1);
+  }
+  
+  .tabs .buttonWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .tabs button {
+    border: none;
+    border-bottom: 5px solid #acacac;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .tabs button:hover {
+    border-bottom: 5px solid #EB0A1E;
+    font-weight: 900;
+  }
+  
+  .tabs button.active {
+    border-bottom: 5px solid #EB0A1E;
+  }
+  
+  .tabs .content {
+    display: none;
+    padding: 20px 0;
+  }
+  
+  .tabs .content.active {
+    display: block;
+  }
 /* ---------- Service Section ---------- */
 .section-services {
     padding-top: 60px;
