@@ -245,11 +245,11 @@ hr:not([size]) {
 }
 /* ---------- Form contact Section ---------- */
 .section-form-contact {
-    margin-top: 120px;
+    margin-top: 50px;
     margin-bottom: 120px;
 }
 .section-form-contact .container{
-    padding: 50px 200px;
+    padding: 50px 10%;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, .1);
@@ -264,7 +264,7 @@ hr:not([size]) {
     display: block;
     width: 30%;
     height: 3px;
-    background-color: tomato;
+    background-color: #EB0A1E;
     margin: auto;
     position: relative;
     top: 15px;
@@ -283,5 +283,117 @@ hr:not([size]) {
     display: block;
 }
 
+/* ---------------------------------------------------------------------------------
+---------------------------------PRODUCT PAGE------------------------------------
+--------------------------------------------------------------------------------- */
+
+/* ---------- Service Section ---------- */
+.section-footer {
+
+}
+.footer-tool {
+    position: fixed;
+    right: -145px;
+    top: 20%;
+    /* transform: translateY(-50%); */
+    z-index: 1;
+}
+.close-tool {
+    height: 48px;
+    width: 194px;
+    padding: 5px 15px;
+    border: 1px solid rgb(212, 212, 212);
+    background-color: white;
+}
+.fa-times, .fa-bars {
+    /* color: #EB0A1E; */
+    font-size: 25px;
+    padding-top: 6px;
+}
+.fa-times:hover, .fa-bars:hover {
+    color: #EB0A1E;
+}
+.tool-item {
+    display:flex;
+    align-items: center;
+    height: 48px;
+    width: 194px;
+    border: 1px solid rgb(212, 212, 212);
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    transition: 0.3s;
+    text-decoration: none;
+    z-index: 0;
+}
+.tool-item:hover {
+    transform: translateX(-145px) !important;
+}
+.tool-item-title {
+    color: black;
+    padding: 0px 10px;
+}
+.tool-item:hover .tool-item-title {
+    color: #EB0A1E;
+}
+.bg-icon {
+    display: block;
+    width: 30px;
+    height: 26px;
+}
+.bg-icon-compare {
+    background: url(/images/icons.png) -89px -339px;
+}
+.bg-icon-calculate {
+    background: url(/images/icons.png) -10px -339px;
+}
+.bg-icon-drive {
+    background: url(/images/icons.png) -364px -219px;
+}
+.bg-icon-service {
+    background: url(/images/icons.png) -232px -219px;
+}
+.bg-icon-price {
+    background: url(/images/icons.png) -51px -339px;
+}
+.bg-icon-download {
+    background: url(/images/icons.png) -126px -339px;
+}
+.footer-menu-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer-menu-item a{
+    text-decoration: none;
+    color: #1A1A1A;
+}
+.footer-info {
+    position: relative;
+    width: 100%;
+    padding: 70px 5% 100px;
+    background-color: #101010;
+}
+#footer-info {
+    margin: 0;
+}
+.footer-info-title {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.footer-info-content {
+    color: rgb(230, 230, 230);
+    font-size: 15px;
+    line-height: 30px;
+}
+#copyright {
+    color: rgb(184, 184, 184);
+    position: absolute;
+    padding: 50px 15px 0px 15px;
+    bottom: 10px;
+}
+/* ---------- Service Section ---------- */
 /* ---------- Service Section ---------- */
 /* ---------- Service Section ---------- */
