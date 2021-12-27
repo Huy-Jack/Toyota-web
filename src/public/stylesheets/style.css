@@ -1,6 +1,7 @@
 :root {
     --text-color: #1A1A1A;
     --red-color: #EB0A1E;
+    --grey-color: #6C757D;
     --red-shadow: 0px 0px 10px 2px var(--red-color);
     --black-shadow: 0px 5px 15px rgba(0, 0, 0, .1);
 }
@@ -12,6 +13,9 @@
     box-sizing: border-box;
 }
 .btn-danger {
+    background-color: var(--red-color) !important;
+}
+.btn-outline-danger:hover {
     background-color: var(--red-color) !important;
 }
 .form-select, .form-control, .btn {
@@ -167,8 +171,9 @@
 .card-img-top {
     padding-top: 20px;
 }
-hr:not([size]) {
-    margin: 30px auto;
+.section-footer hr {
+    margin-bottom: 30px;
+    margin-top: 0;
 }
 #service-items {
     text-align: center;
@@ -395,7 +400,7 @@ hr:not([size]) {
 .footer-info {
     position: relative;
     width: 100%;
-    padding: 70px 5% 100px;
+    padding: 70px 5% 10px;
     background-color: #101010;
 }
 #footer-info {
@@ -420,10 +425,7 @@ hr:not([size]) {
     width: 100%;
 }
 /* ---------- Product filter Section ---------- */
-#product-filter-col {
-    /* width: 14.28%;
-    min-width: 200px; */
-}
+
 /* ---------- Product List Section ---------- */
 .section-product-list-car {
     background-color: rgb(241, 241, 241);
@@ -449,6 +451,9 @@ hr:not([size]) {
     position: relative;
     top: -120px;
 }
+.content-product-description {
+    text-align: center;
+}
 .product-item-content .content-title {
     text-align: center;
     font-size: 20px;
@@ -470,19 +475,20 @@ hr:not([size]) {
     border-color: var(--red-color);
     color: white;
 }
-.pagination .page-link {
-    color: var(--red-color);
+.pagination .page-item:hover.active .page-link {
+    color: white;
 }
 .pagination .page-link {
+    color: var(--grey-color);
+}
+.list-car-pagination .pagination .page-link {
     font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .pagination .page-item:hover .page-link {
-    color: var(--red-color);
+    color: var(--grey-color);
 }
-.pagination .page-item:focus .page-link {
-    color: var(--red-color);
-}
-/* .page-link.active {
-    color: white !important;
-} */
+
+
 /* ---------- Service Section ---------- */
