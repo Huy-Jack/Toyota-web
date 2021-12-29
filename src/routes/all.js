@@ -7,8 +7,8 @@ routes.get('/', (req, res) => {
 })
 
 routes.get('/products', async (req, res) => {
-    const car = await Car.find({});
-    res.render('products', {car});
+    const cars = await Car.find({});
+    res.render('products', {cars});
 })
 
 module.exports = routes;

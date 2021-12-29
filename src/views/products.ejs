@@ -101,7 +101,119 @@
                     </select>
                 </div>
                 <div class="row" id="list-car">
+                    <!-- <div class="col-md-4">
+                        <div class="box-product-item">
+                            <div class="product-item-image">
+                                <a href="">
+                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
+                                        alt="VIOS 1.5E MT (3 túi khí)">
+                                </a>
+                            </div>
+                            <div class="product-item-content">
+                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
+                                <p class="content-price">
+                                    <span>Giá từ</span>
+                                    <span>478.000.000</span>
+                                    <span>VNĐ</span>
+                                </p>
+                                <div class="content-product-description">
+                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
+                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
+                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
+                                </div>
+                                <div class="content-product-compare mt-4">
+                                    <button class="btn btn-danger">DỰ TOÁN</button>
+                                    <button class="btn btn-outline-danger">SO SÁNH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-4">
+                        <div class="box-product-item">
+                            <div class="product-item-image">
+                                <a href="">
+                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
+                                        alt="VIOS 1.5E MT (3 túi khí)">
+                                </a>
+                            </div>
+                            <div class="product-item-content">
+                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
+                                <p class="content-price">
+                                    <span>Giá từ</span>
+                                    <span>478.000.000</span>
+                                    <span>VNĐ</span>
+                                </p>
+                                <div class="content-product-description">
+                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
+                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
+                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
+                                </div>
+                                <div class="content-product-compare mt-4">
+                                    <button class="btn btn-danger">DỰ TOÁN</button>
+                                    <button class="btn btn-outline-danger">SO SÁNH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box-product-item">
+                            <div class="product-item-image">
+                                <a href="">
+                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
+                                        alt="VIOS 1.5E MT (3 túi khí)">
+                                </a>
+                            </div>
+                            <div class="product-item-content">
+                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
+                                <p class="content-price">
+                                    <span>Giá từ</span>
+                                    <span>478.000.000</span>
+                                    <span>VNĐ</span>
+                                </p>
+                                <div class="content-product-description">
+                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
+                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
+                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
+                                </div>
+                                <div class="content-product-compare mt-4">
+                                    <button class="btn btn-danger">DỰ TOÁN</button>
+                                    <button class="btn btn-outline-danger">SO SÁNH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <% for (car of cars) {%>
+                        <div class="col-md-4">
+                            <div class="box-product-item">
+                                <div class="product-item-image">
+                                    <a href="">
+                                        <img id="product-car-img" class="img-fluid" src="<%=car.imageOriginal[0].url%>"
+                                            alt="<%=car.name%>">
+                                    </a>
+                                </div>
+                                <div class="product-item-content">
+                                    <h2 class="content-title"><%= car.name %></h2>
+                                    <p class="content-price">
+                                        <span>Giá từ</span>
+                                        <% const price = (car.priceOriginal).toLocaleString(); %>
+                                        <span><%= price %></span>
+                                        <span>VNĐ</span>
+                                    </p>
+                                    <div class="content-product-description">
+                                        <p class="mb-2"><span><%=car.descriptions[0]%></span> - <span><%=car.descriptions[1]%></span> - <span><%=car.descriptions[2]%></span></p>
+                                        <p class="mb-2"><span><%=car.descriptions[3]%></span> - <span><%=car.descriptions[4]%></span></p>
+                                        <p class="mb-2"><span><%=car.descriptions[5]%></span></p>
+                                    </div>
+                                    <div class="content-product-compare mt-4">
+                                        <button class="btn btn-danger">DỰ TOÁN</button>
+                                        <button class="btn btn-outline-danger">SO SÁNH</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                    
+                    <!-- <div class="col-md-4">
                         <div class="box-product-item">
                             <div class="product-item-image">
                                 <a href="">
@@ -235,115 +347,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="list-car-pagination">
                     <nav aria-label="...">
