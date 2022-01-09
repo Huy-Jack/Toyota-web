@@ -1,14 +1,21 @@
 const express = require('express');
 const routes = express.Router();
-const Car = require('../models/cars');
+const carController = require('../controllers/carController')
 
 routes.get('/', (req, res) => {
     res.render('home');
 })
 
-routes.get('/products', async (req, res) => {
-    const cars = await Car.find({});
-    res.render('products', {cars});
+routes.get('/products', (req, res) => {
+    res.render('products');
 })
+
+routes.get('/getproducts', carController.getCars)
+
+routes.post('/filter', carController.filterAll)
+
+routes.post('/filter/types', carController.filterTypes)
+
+routes.post('/filter/category', carController.filterCategory)
 
 module.exports = routes;
