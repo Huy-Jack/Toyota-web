@@ -1,21 +1,33 @@
-const express = require('express');
+const express = require("express");
 const routes = express.Router();
-const carController = require('../controllers/carController')
+const carController = require("../controllers/carController");
 
-routes.get('/', (req, res) => {
-    res.render('home');
-})
+routes.get("/", (req, res) => {
+  res.render("home");
+});
 
-routes.get('/products', (req, res) => {
-    res.render('products');
-})
+routes.get("/products", (req, res) => {
+  res.render("products");
+});
 
-routes.get('/getproducts', carController.getCars)
+routes.get("/hybrid", (req, res) => {
+  res.render("hybrid");
+});
 
-routes.post('/filter', carController.filterAll)
+routes.get("/tss", (req, res) => {
+  res.render("tss");
+});
 
-routes.post('/filter/types', carController.filterTypes)
+routes.get("/tnga", (req, res) => {
+  res.render("tnga");
+});
 
-routes.post('/filter/category', carController.filterCategory)
+routes.get("/getproducts", carController.getCars);
+
+routes.post("/filter", carController.filterAll);
+
+routes.post("/filter/types", carController.filterTypes);
+
+routes.post("/filter/category", carController.filterCategory);
 
 module.exports = routes;
