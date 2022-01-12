@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== "production") {
 const express = require('express');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
+const $ = require('jquery');
 const path = require('path');
 const testRouter = require('./src/routes/all.js');
 const adminRouter = require('./src/routes/admin.js');
@@ -28,6 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
+app.use('/jquery',express.static(path.join(__dirname+'/node_modules/jquery/dist/'))); 
 app.use(express.static('src/public'));
 
 app.use('/', testRouter);

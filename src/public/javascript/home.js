@@ -4,6 +4,7 @@ const contents = document.querySelectorAll(".content");
 
 function active(el) {
     el.addEventListener('click', e => {
+       
         tabButtons.forEach(btn => {
             btn.classList.remove('active')
         })

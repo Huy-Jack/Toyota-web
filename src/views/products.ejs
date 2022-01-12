@@ -1,362 +1,174 @@
-<%- include('./partials/header') %>
-    <%- include('./partials/navbar') %>
+<%- include('./partials/header') %> <%- include('./partials/navbar') %>
 
-        <section class="section-product-banner">
-            <div class="banner">
-                <img class="img-fluid" src="/images/banner-product.jpg" alt="Product banner">
-            </div>
-        </section>
+<section class="section-product-banner">
+  <div class="banner">
+    <img
+      class="img-fluid"
+      src="/images/banner-product.jpg"
+      alt="Product banner"
+    />
+  </div>
+</section>
 
-        <section class="section-product-filter">
-            <div class="container my-5">
-                <div class="row">
-                    <div class="col-md-4" id="product-filter-col">
-                        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2">Kiểu dáng</label>
-                        <select class="form-select select-group-label" name="car-style"
-                            aria-label="Default select example">
-                            <option selected disabled>Chọn</option>
-                            <option value>Tất cả</option>
-                            <option value="0001">Sedan</option>
-                            <option value="0002">Hatchback</option>
-                            <option value="0003">SUV</option>
-                            <option value="0004">Đa dụng</option>
-                            <option value="0005">Bán tải</option>
-                            <option value="0006">Thương mại</option>
-                        </select>
-                    </div>
-                    <div class="col-md-4" id="product-filter-col">
-                        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2">Giá</label>
-                        <select class="form-select select-group-label" name="car-style"
-                            aria-label="Default select example">
-                            <option selected disabled>Chọn</option>
-                            <option value>Tất cả</option>
-                            <option value="6">300 triệu - 500 triệu</option>
-                            <option value="1">500 triệu - 1 tỷ</option>
-                            <option value="2">1 tỷ - 2 tỷ</option>
-                            <option value="3">2 tỷ - 3 tỷ</option>
-                            <option value="4">3 tỷ - 4 tỷ</option>
-                            <option value="5">Trên 4 tỷ</option>
-                        </select>
-                    </div>
-                    <div class="col-md-4" id="product-filter-col">
-                        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2">Số chỗ ngồi</label>
-                        <select class="form-select select-group-label" name="car-style"
-                            aria-label="Default select example">
-                            <option selected disabled>Chọn</option>
-                            <option value>Tất cả</option>
-                            <option value="1">5 chỗ</option>
-                            <option value="2">7 chỗ</option>
-                            <option value="3">8 chỗ</option>
-                            <option value="4">9 chỗ</option>
-                            <option value="5">15 chỗ</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3" id="product-filter-col">
-                        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2">Dòng xe</label>
-                        <select class="form-select select-group-label" name="car-style"
-                            aria-label="Default select example">
-                            <option selected disabled>Chọn</option>
-                            <option value>Tất cả</option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                    <div class="col-md-3" id="product-filter-col">
-                        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2">Phiên Bản</label>
-                        <select class="form-select select-group-label" name="car-style"
-                            aria-label="Default select example">
-                            <option selected disabled>Chọn</option>
-                            <option value>Tất cả</option>
-                            <option value="0001">Sedan</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3" id="product-filter-col">
-                        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2">Nhiên liệu</label>
-                        <select class="form-select select-group-label" name="car-style"
-                            aria-label="Default select example">
-                            <option selected disabled>Chọn</option>
-                            <option value>Tất cả</option>
-                            <option value="0001">Sedan</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3" id="product-filter-col">
-                        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2">Xuất xứ</label>
-                        <select class="form-select select-group-label" name="car-style"
-                            aria-label="Default select example">
-                            <option selected disabled>Chọn</option>
-                            <option value>Tất cả</option>
-                            <option value="0001">Sedan</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="section-product-filter">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4" id="product-filter-col">
+        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2"
+          >Kiểu dáng</label
+        >
+        <select
+          class="form-select select-group-label"
+          name="car-style"
+          id="car-style"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Chọn</option>
+          <option value>Tất cả</option>
+          <option value="0001">Sedan</option>
+          <option value="0002">Hatchback</option>
+          <option value="0003">SUV</option>
+          <option value="0004">Đa dụng</option>
+          <option value="0005">Bán tải</option>
+          <option value="0006">Thương mại</option>
+        </select>
+      </div>
+      <div class="col-md-4" id="product-filter-col">
+        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2"
+          >Giá</label
+        >
+        <select
+          class="form-select select-group-label"
+          name="car-style"
+          id="car-price"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Chọn</option>
+          <option value>Tất cả</option>
+          <option value="6">300 triệu - 500 triệu</option>
+          <option value="1">500 triệu - 1 tỷ</option>
+          <option value="2">1 tỷ - 2 tỷ</option>
+          <option value="3">2 tỷ - 3 tỷ</option>
+          <option value="4">3 tỷ - 4 tỷ</option>
+          <option value="5">Trên 4 tỷ</option>
+        </select>
+      </div>
+      <div class="col-md-4" id="product-filter-col">
+        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2"
+          >Số chỗ ngồi</label
+        >
+        <select
+          class="form-select select-group-label"
+          name="car-style"
+          id="car-seat"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Chọn</option>
+          <option value>Tất cả</option>
+          <option value="1">5 chỗ</option>
+          <option value="2">7 chỗ</option>
+          <option value="3">8 chỗ</option>
+          <option value="4">9 chỗ</option>
+          <option value="5">15 chỗ</option>
+        </select>
+      </div>
+      <div class="col-md-3" id="product-filter-col">
+        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2"
+          >Dòng xe</label
+        >
+        <select
+          class="form-select select-group-label"
+          name="car-style"
+          id="car-category"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Chọn</option>
+          <option value>Tất cả</option>
+        </select>
+      </div>
+      <div class="col-md-3" id="product-filter-col">
+        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2"
+          >Phiên Bản</label
+        >
+        <select
+          class="form-select select-group-label"
+          name="car-style"
+          id="car-version"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Chọn</option>
+          <option value>Tất cả</option>
+        </select>
+      </div>
+      <div class="col-md-3" id="product-filter-col">
+        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2"
+          >Nhiên liệu</label
+        >
+        <select
+          class="form-select select-group-label"
+          name="car-style"
+          id="car-fuel"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Chọn</option>
+          <option value>Tất cả</option>
+          <option value="0001">Xăng</option>
+          <option value="0002">Dầu</option>
+          <option value="0003">Xăng + Điện</option>
+        </select>
+      </div>
+      <div class="col-md-3" id="product-filter-col">
+        <label for="car-style" class="product-filter-label fw-bold mb-2 mt-2"
+          >Xuất xứ</label
+        >
+        <select
+          class="form-select select-group-label"
+          name="car-style"
+          id="car-origin"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Chọn</option>
+          <option value>Tất cả</option>
+          <option value="0001">Xe trong nước</option>
+          <option value="0002">Xe nhập khẩu</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section class="section-product-list-car py-5">
-            <div class="container" id="list-car-container">
-                <div class="list-car-sort">
-                    <select class="form-select select-group-label" name="car-style" aria-label="Default select example">
-                        <option selected disabled>Sắp xếp</option>
-                        <option value>Tất cả</option>
-                        <option value="0001">Sedan</option>
-                    </select>
-                </div>
-                <div class="row" id="list-car">
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="box-product-item">
-                            <div class="product-item-image">
-                                <a href="">
-                                    <img id="product-car-img" class="img-fluid" src="/images/vios1.png"
-                                        alt="VIOS 1.5E MT (3 túi khí)">
-                                </a>
-                            </div>
-                            <div class="product-item-content">
-                                <h2 class="content-title">VIOS 1.5E MT (3 túi khí)</h2>
-                                <p class="content-price">
-                                    <span>Giá từ</span>
-                                    <span>478.000.000</span>
-                                    <span>VNĐ</span>
-                                </p>
-                                <div class="content-product-description">
-                                    <p class="mb-2"><span>5 chỗ</span> - <span>Sedan</span> - <span>Xăng</span></p>
-                                    <p class="mb-2"><span>Xe trong nước</span> - <span>Số tay 5 cấp</span></p>
-                                    <p class="mb-2"><span>Động cơ xăng dung tích 1496cc</span></p>
-                                </div>
-                                <div class="content-product-compare mt-4">
-                                    <button class="btn btn-danger">DỰ TOÁN</button>
-                                    <button class="btn btn-outline-danger">SO SÁNH</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-car-pagination">
-                    <nav aria-label="...">
-                        <ul class="pagination pagination-lg justify-content-center">
-                            <li class="page-item disabled"> <a class="page-link">Trước</a> </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item" aria-current="page"> <a class="page-link" href="#">2</a> </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"> <a class="page-link" href="#">Sau</a> </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </section>
+<section class="section-product-list-car py-5">
+  <div class="container" id="list-car-container">
+    <div class="list-car-sort">
+      <select
+        class="form-select select-group-label"
+        name="car-style"
+        aria-label="Default select example"
+        id="car-sort"
+      >
+        <option selected disabled>Sắp xếp</option>
+        <option value=" ">Tất cả</option>
+        <option value="1">Giá từ thấp tới cao</option>
+        <option value="3">Giá từ cao tới thấp</option>
+      </select>
+    </div>
+    <div class="row" id="list-car"></div>
+    <div class="list-car-pagination">
+      <nav aria-label="...">
+        <ul class="pagination pagination-lg justify-content-center">
+          <li class="page-item disabled"><a class="page-link">Trước</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item" aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
 
-        <%- include('./partials/footer') %>
+<script src="/javascript/jquery-3.6.0.min.js"></script>
+<script src="/javascript/data.js"></script>
+<%- include('./partials/footer') %>

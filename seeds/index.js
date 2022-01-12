@@ -1,6 +1,7 @@
 const mongoose  = require('mongoose');
 const Car = require('../src/models/cars.js');
 const { cars, origin, colorsCar, interior, exterior, safe, operate } = require('./cars.js');
+const carjson = require('./data_car_toyota.json');
 
 mongoose.connect('mongodb://localhost:27017/toyota', {
     useNewUrlParser: true,
@@ -14,35 +15,46 @@ db.once("open", () => {
     console.log('Database connected');
 })   
 
-const myRandom = (s, e) => {
-    return Math.floor(Math.random() * e + s);
+const modelCar = ['Fortuner', 'Raize', 'Vios', 'Wigo','Avanza', 'Rush', 'Yaris', 'Hilux', 'Corolla Altis', 'Alphard', 'Granvia', 'Hiace',
+'Land Prado', 'Land Cruiser', 'Camry', 'Corolla Cross', 'Innova'];
+
+const getModel = (nameCar) => {
+    let res = '';
+    modelCar.forEach(model => {
+        const modelUpper = model.toUpperCase();
+        if (nameCar.includes(modelUpper)) {
+            res = model;
+        }
+    })
+    return res;
 }
 
 const initData = async() =>{
     await Car.deleteMany({});
-    for (let i=0; i<10; i++) {
-        const priceRan = myRandom(5, 20) * 100000;
-        const originRan = origin[myRandom(0,1)];
+
+    for (let i=0; i<carjson.length; i++) {
+        const price = parseInt(carjson[i].price.split(".").join(""));
+        const model = getModel(carjson[i].title);
         const car = new Car({
-            name: cars[i].name,
-            priceOriginal: priceRan,
-            origin: originRan,
-            category: cars[i].model,
+            name: carjson[i].title,
+            priceOriginal: price,
+            origin: carjson[i].description_4,
+            category: model,
+            types: carjson[i].description_2,
             imageOriginal: [
                 {
                     url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1639190152/Toyota/kz10l8vp6ysicym6ncxw.png',
                     filename: 'Toyota/kz10l8vp6ysicym6ncxw'
                 }
             ],
-            versions: 'Toyota-v',
-            descriptions: [...cars[i].description],
+            version: carjson[i].title,
+            descriptions: [carjson[i].description_1, carjson[i].description_2, carjson[i].description_3, carjson[i].description_4, carjson[i].description_5, carjson[i].description_6],
             colorsCar : colorsCar,
             interior: interior,
             exterior: exterior,
             safe: safe,
             operate: operate,
-            types: 'SEDAN',
-            seats: '5 chỗ'
+            seats: carjson[i].description_1
         })
         await car.save();
     }
@@ -50,3 +62,7 @@ const initData = async() =>{
 }
 
 initData();
+
+// let  nums = [2,3,4,5,6];
+// nums = nums.filter(num => num > 3);
+// console.log(nums);
