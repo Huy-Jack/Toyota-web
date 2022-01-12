@@ -1,10 +1,9 @@
 $(document).ready(async function () {
-    alert('application started');
-
     let response = await getdata();
     let data = response.data;
 
     showdata(data);
+
     $("#car-style").on("change", function(){
         const valueStyle = $("#car-style").val();
         return $.ajax({
@@ -24,7 +23,7 @@ $(document).ready(async function () {
     $("#car-category").on("change", function(){
         const valueCategory = $("#car-category").val();
         if (!valueCategory) {
-            console.log('hello')
+
             $('#car-version').html('');
             $('#car-version').append('<option selected disabled>Chọn</option>');
         }
@@ -53,13 +52,11 @@ $(document).ready(async function () {
         const valueOrigin = $("#car-origin").val();
         const valueSort = $("#car-sort").val();
         //filter?style=001
-        console.log(valueVersion)
         return $.ajax({
             url: `/filter?style=${valueStyle}&price=${valuePrice}&seat=${valueSeat}&category=${valueCategory}&version=${valueVersion}&fuel=${valueFuel}&origin=${valueOrigin}&sort=${valueSort}`,
             method: 'post',
             dataType: 'json',
             success: (function (response) {
-                console.log(response)
                 showdata(response.data);
             })
         });
@@ -116,7 +113,6 @@ $(document).ready(async function () {
     }
 
     function getdata() {
-        console.log('getdata')
         return $.ajax({
             url: '/getproducts',
             method: 'get',
